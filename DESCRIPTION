@@ -11,7 +11,9 @@ Description: The FARSR packages contains the FARSR datasets, provide several
 License: GPL-3
 Imports: dplyr,
     tidyr,
-    graphics
+    graphics,
+    maps,
+    readr
 Suggests: knitr,
     testthat,
     rmarkdown
