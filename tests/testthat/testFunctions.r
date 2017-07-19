@@ -1,4 +1,5 @@
 library(FARSR)
+context("General")
 
 test_that("File_name is the right format and character", {
   expect_equal(make_filename(2014), "accident_2014.csv.bz2")
