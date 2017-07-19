@@ -1,0 +1,4 @@
+"0","fars_map_state(12,2013)"
+"2","Error in fars_read(filename) : 
+  file 'accident_2013.csv.bz2' does not exist
+"

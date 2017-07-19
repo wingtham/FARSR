@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "Package: FARSR\nType: Package\nTitle: FARSR Analysis\nVersion: 1.0\nDate: 2017-07-18\nAuthor@R: person(\"Wing\", \"Tham\", emai=\"wingtham@yahoo.com\",\n        role = c(\"aut\", \"cre\"))\nDescription: The FARSR packages contains the FARSR datasets, provide several \n  functions to read the data. It also provides summary and visulaisation \n  functions to analyse the data.\nLicense: GPL-3\nImports: dplyr,\n    tidyr,\n    graphics\nSuggests: knitr,\n    testthat,\n    rmarkdown\nVignetteBuilder: knitr\nRoxygenNote: 6.0.1\n",
+    "created" : 1500366263842.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4038492278",
+    "id" : "3B655C24",
+    "lastKnownWriteTime" : 1500367182,
+    "last_content_update" : 1500367182,
+    "path" : "~/FARSR/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "dcf"
+}

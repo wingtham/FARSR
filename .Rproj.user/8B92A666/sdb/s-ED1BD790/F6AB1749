@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"FARS Analysis Vignette\"\nauthor: \"Wing Tham\"\ndate: \"`r Sys.Date()`\"\noutput: rmarkdown::html_vignette\nvignette: >\n  %\\VignetteIndexEntry{FARS Analysis Vignette}\n  %\\VignetteEngine{knitr::rmarkdown}\n  %\\VignetteEncoding{UTF-8}\n---\n## Introduction\n\nFARS is abbreviation of Fatality Analysis Reporting System. FARS is a nationwide\ncensus providing the American public yearly data regarding fatal injuries \nsuffered in motor vehicle traffic crashes. The data is collected from the US \nNational Highway Safety Administration. \n\nThe FARS package aims to provide functions: \n* to read FARS data from files,\n* to summarise FARS data on a yearly basis\n* to visualise incidents in a given state and a given year\n\n## Data and Filename\nThe data is assumed to be stored as a bz2 file, with each file corresponding to \na year. The function `make_filename` generates the appropriate filename given a \nfour-digit year, as shown in the following:\n\n```{r}\nlibrary(FARSR)\nmake_filename(2014)\n\n```\n\n## Retrieving FARS Data from File\n### Reading one file\nThe core function to read data from file is `fars_read`. Given a filename, the \nfunction tries locating the file and read in the data. NOte that the file name\nneeds to be in the right format, which could be generated using the previous \nfunction. Alternatively, the functions can be chained as illustrated in the\nfollowing:\n\n```{r, eval = FALSE}\ndf <- fars_read(make_filename(2014))\n```\n\n### Reading multiple fles\nA wrapper function is also created to read multiple files. Instead of specifying \nfilenames, the required argument is the years of interests. This is illustrated\nin the following:\n\n```{r, eval=FALSE}\ndfList <- fars_read_years(2013:2015)\n```\n\n## Quick Summary\n`fars_summarize_years` gives a quick overview of number of incidents over the \ngiven years, in a tabular format. This enables users to have a glance of how\nthe numbers are distributed, and in some instance anomalies:\n\n```{r, echoe=FALSE, results=\"hide\"}\nlibrary(dplyr)\n```\n\n```{r}\nfars_summarize_years(2013:2015)\n```\n\n## Visualisation\nUsers can also select the state number and the year they would like to \nvisualise. This is illustrated in the following:\n\n```{r}\nfars_map_state(12,2013)\n\n```\n",
+    "created" : 1500367183003.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3660614191",
+    "id" : "F6AB1749",
+    "lastKnownWriteTime" : 1500372959,
+    "last_content_update" : 1500372959981,
+    "path" : "~/FARSR/vignettes/FARSR-Vignette.Rmd",
+    "project_path" : "vignettes/FARSR-Vignette.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

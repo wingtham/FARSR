@@ -1,0 +1,4 @@
+"0","df <- fars_read(make_filename(2004))"
+"2","Error in fars_read(make_filename(2004)) : 
+  file 'accident_2004.csv.bz2' does not exist
+"

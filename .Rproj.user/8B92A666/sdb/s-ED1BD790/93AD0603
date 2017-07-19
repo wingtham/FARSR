@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(FARSR)\ncontext(\"General\")\n\ntest_that(\"File_name is the right format and character\", {\n  expect_equal(make_filename(2014), \"accident_2014.csv.bz2\")\n  expect_equal(make_filename(2015), \"accident_2015.csv.bz2\")\n  expect_equal(make_filename(\"2013\"), \"accident_2013.csv.bz2\")\n})\n\ntest_that(\"Loaded file is a data frame\", {\n  expect_is(fars_read(\"accident_2013.csv.bz2\"), \"data.frame\")\n  expect_is(fars_read(\"accident_2014.csv.bz2\"), \"data.frame\")\n})\n\ntest_that(\"Error message is produced if file does not exist\", {\n  expect_error(fars_read(make_filename(\"ABC\")))\n  expect_error(fars_read(\"accident_14.csv.bz2\"))\n})\n\ntest_that(\"Loaded files stored as list\", {\n  expect_is(fars_read_years(2013:2014), \"list\")\n  expect_is(fars_read_years(2014:2015), \"list\")\n  expect_is(fars_read_years(2013), \"list\")\n})\n\n\ntest_that(\"Summarised data stored as data frame\", {\n  expect_is(fars_summarize_years(2013:2014), \"data.frame\")\n  expect_is(fars_summarize_years(2014:2015), \"data.frame\")\n  expect_is(fars_summarize_years(2013), \"data.frame\")\n})\n\n\ntest_that(\"Messages produced for maps visualisation\", {\n  expect_error(fars_map_state(0,2013))\n  expect_error(fars_map_state(1000,2013))\n})\n",
+    "created" : 1500452417926.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "558196186",
+    "id" : "93AD0603",
+    "lastKnownWriteTime" : 1500454193,
+    "last_content_update" : 1500454193636,
+    "path" : "~/FARSR/tests/testthat/testFunctions.r",
+    "project_path" : "tests/testthat/testFunctions.r",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
