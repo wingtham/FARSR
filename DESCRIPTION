@@ -1,0 +1,19 @@
+Package: FARSR
+Type: Package
+Title: FARSR Analysis
+Version: 1.0
+Date: 2017-07-18
+Author@R: person("Wing", "Tham", emai="wingtham@yahoo.com",
+        role = c("aut", "cre"))
+Description: The FARSR packages contains the FARSR datasets, provide several 
+  functions to read the data. It also provides summary and visulaisation 
+  functions to analyse the data.
+License: GPL-3
+Imports: dplyr,
+    tidyr,
+    graphics
+Suggests: knitr,
+    testthat,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 6.0.1
